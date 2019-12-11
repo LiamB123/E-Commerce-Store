@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load bootstrap_tags %}
+
+
+{% block content %}
+<div class="form-width" ><form method="POST" >
+        {% csrf_token %}
+        {{ login_form | as_bootstrap}}
+        <button type="submit" class="btn btn-dark" class>
+            Login
+        </button>
+</form>
+<p><a href="{% url 'password_reset' %}">Reset Password </a> </p>
+
+<p>Dont have an account with us? 
+<hr>
+<a href="{% url 'registration' %}">
+Sign Up!</a></p>
+</div>
+{% endblock %}  

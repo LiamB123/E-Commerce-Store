@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+{% load bootstrap_tags %}
+{% block content %}
+
+<div class="form-width"><p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
+<form method="POST" class="form-width">
+    {% csrf_token %} {{ registration_form | as_bootstrap }}
+    <button type="submit" class="btn btn-dark">Register</button>
+</form>
+</div>
+{% endblock %}
