@@ -1,0 +1,114 @@
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Retro Jerseys Store</title>
+
+  <!-- Custom fonts for this theme -->
+ 
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.css' %}" />
+ 
+  <!--- custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" />
+  
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.css' %}" rel="stylesheet">
+  
+ 
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">Retro Jerseys</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-dark text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"> 
+           {% if user.is_authenticated %}
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </li>
+          
+          {% else %}
+           <li class="nav-item mx-0 mx-lg-1"> 
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'registration' %}"><i class="fas fa-user-plus primary"></i> Register</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+          </li>
+          {% endif %}
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'products' %}"><i class="fas fa-store-alt"></i> Store</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">Retro Jerseys </h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">
+        <h2>
+        High Quality Retro Threads!
+        </h2>
+        <hr>
+        <h3>
+        Buy, Browse or Sell your Jerseys with us!
+        </h3>
+        </p>
+      
+
+    </div>
+  </header>
+
+
+<body>
+  {% block content %}
+  {% endblock %}
+  
+  
+  <!-- Bootstrap core JavaScript -->
+
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
