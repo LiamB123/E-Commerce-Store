@@ -1,0 +1,116 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+      
+    <div class="row row-flex ">
+      <div class="btn-group btn-block" role="group">
+    <a class= "btn btn-outline-dark btn-lg" href="{% url 'products' %}">Jump to the Store</a>
+    <a class= "btn btn-outline-dark btn-lg" href="{% url 'contact' %}">Contact Us!</a>
+    <a class = "btn btn-outline-dark btn-lg" href="">Sell Your Own!</a>
+    </div>
+    </div>
+  
+
+      <!-- Portfolio Grid Items -->
+
+    
+  </section>
+
+  <!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-white">Join Us!</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- About Section Content -->
+      <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <p class="lead">Retro Jeseys is exactly what it says on the tin, a place for us to share the finest threads and kit you out with times greatest jerseys</p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <p class="lead"> Want to join the community? Register now and become one of the gang!</p>
+        </div>
+      </div>
+
+      <!-- About Section Button -->
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-outline-light" href="{% url 'registration' %}">
+          <i class="fas fa-download mr-2"></i>
+         Sign up!
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Location</h4>
+          <p class="lead mb-0">123 Yellow street
+            <br>Dublin Boi</p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-twitter"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-dribbble"></i>
+          </a>
+        </div>
+
+        <!-- Footer About Text -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4">Delivery issues?</h4>
+          <p class="lead mb-0">This is frankly unacceptable and you should complain
+            <a href="http://startbootstrap.com">Dpd</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <section class="copyright  text-center">
+    <div class="container">
+      <small>Copyright &copy; Liam Browne 2019</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  
+  {% endblock %}
