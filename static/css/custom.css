@@ -49,3 +49,11 @@
     height:200px;
     margin: 0 auto;
 }
+
+
+.form-sales{
+    text-align: center;
+    background-color:#F8F8F8 ;
+    color:black;
+    font-family: Montserrat;
+}

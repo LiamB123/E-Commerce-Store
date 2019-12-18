@@ -18,6 +18,6 @@ class sales_form(models.Model):
     name= models.CharField(max_length=50, blank=False, null=False)
     subject= models.CharField(max_length=50, blank=False,null=False)
     message=models.TextField(max_length=300,blank=False,null=False)
-    contact= models.EmailField(max_length=80, blank=False,null=False)
+    contact_details= models.EmailField(max_length=80, blank=False,null=False)
     date = models.DateField()
-    image = models.ImageField(upload_to="img/received")
+    image = models.ImageField(upload_to="static/img/received")
