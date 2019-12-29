@@ -160,7 +160,7 @@ AWS_ACCESS_KEY_ID=os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY= os.environ.get("AWS_SECRET_ACCESS_KEY")
 
 AWS_S3_CUSTOM_DOMAIN='liams-ecommerce-store.s3.amazonaws.com'
-STATICFILES_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE='custom_storages.StaticStorage'
 
 
 STATICFILES_LOCATION = 'static'
@@ -171,9 +171,10 @@ STATICFILES_DIRS = (
 )
 
 MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE='custom_storages.MediaStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
-MEDIA_URL = '/media/'
+MEDIA_URL = "https://liams-ecommerce-store.s3.amazonaws.com/media/"
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
