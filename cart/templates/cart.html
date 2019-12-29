@@ -3,9 +3,9 @@
     <div class="row row-flex">
         {% for item in cart_items %}
 
-        <div class="col-xs-6 col-xs-offset-1 col-sm-offset-1 col-sm-6 col-md-6 col-lg-6">
+        <div class="card col-xs-6 col-xs-offset-1 col-sm-offset-1 col-sm-6 col-md-6 col-lg-6">
 
-            <div class="card">
+            <div class="">
                 <h3>{{ item.product.name }}</h3>
                 <p class="card-description">{{ item.product.description }}</p>
                 <p>€{{ item.product.price }}</p>
@@ -16,8 +16,8 @@
                         <div class="form-group">
                             <label for="exampleInputAmount" class="sr-only">New Qty</label>
                             <div class="input-group">
-                                <div class="input-group-addon">Qty</div>
-                                <input name="quantity" type="number" min="0" max="999" class="form-control">
+                                <div class="input-group" >Qty</div>
+                                <input name="quantity" type="number" min="1" max="999" class="form-control">
                                 <br>
                                 <div class="input-group-addon">{{item.quantity}}</div>
                             </div>
@@ -28,8 +28,9 @@
             </div>
         </div>
 
-        <div class="col-xs-4 col-xs-offset-1 col-sm-offset-1 col-sm-4 col-md-4 col-lg-4">
-            <div class="panel" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+        <div class="card col-xs-4 col-xs-offset-1 col-sm-offset-1 col-sm-4 col-md-4 col-lg-4 card-img-top">
+            <div class="img-sizer" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                
 
             </div>
         </div>

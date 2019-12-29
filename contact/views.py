@@ -29,8 +29,7 @@ def sales_form(request):
     if request.method == 'POST':
             form = SalesForm(request.POST)
             if form.is_valid():
-                return HttpResponse('Thanks for contacting us!'), "index.html"
-                
+                return HttpResponse('Thanks for contacting us!')
             
     else:
             

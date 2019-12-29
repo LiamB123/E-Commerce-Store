@@ -1,12 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
+     {% for p in products %}
     <div class="row row-flex">
-        {% for p in products %}
-        <div class="col-xs-12 col-xs-offset-0 col-sm-offset-0 col-sm-12 col-md-6 col-lg-6 card card-img-top">
-            <div class="img-fill" style=" background-image: url('{{ MEDIA_URL}}{{p.image}}')">
+       
+        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12 card-img-top spacing">
+            <div class="img-sizer text-boldness" style=" background-image: url('{{ MEDIA_URL}}{{p.image}}')">
       
-                    <h3>{{p.name}}</h3>
-                    <p class="card-body">{{ p.description }}</p>
+                    <h3 class="underlined">{{p.name}}</h3>
+                    <p class="card-body text-boldness">{{ p.description }}</p>
                     <p>{{p.price}}</p>
 
 
@@ -27,7 +28,8 @@
                 </div>
             </div>
         </div>
-    </div>
+   
     {% endfor %}
+   </div>
 </div>
 {% endblock %}

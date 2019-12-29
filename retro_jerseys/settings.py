@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'products',
     'checkout',
     'contact',
-    'cart'
+    'cart',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   
+
 ]
 
 ROOT_URLCONF = 'retro_jerseys.urls'
@@ -146,6 +147,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+AWS_S3_OBJECT_PARAMETERS={
+    'Expires':'Thu, 31st Dec 2099 00:00:01 GMT',
+    'CacheControl':'max-age=94608000',
+    
+}
+
+AWS_STORAGE_BUCKET_NAME='liams-ecommerce-store'
+AWS_S3_REGION_NAME="eu-west-1"
+AWS_ACCESS_KEY_ID=os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY= os.environ.get("AWS_SECRET_ACCESS_KEY")
+
+AWS_S3_CUSTOM_DOMAIN='liams-ecommerce-store.s3.amazonaws.com'
+STATICFILES_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
+
 
 STATICFILES_LOCATION = 'static'
 
