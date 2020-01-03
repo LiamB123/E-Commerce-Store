@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import dj_database_url
+if "env.py"  in os.environ:
+    import env
+    
 
-#import env
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
