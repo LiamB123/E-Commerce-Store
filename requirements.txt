@@ -9,13 +9,14 @@ django-forms-bootstrap==3.1.0
 django-storages==1.8
 docutils==0.15.2
 gunicorn==19.10.0
-heroku==0.1.4
+heroku==0.11
 jedi==0.11.1
 jmespath==0.9.4
 Pillow==6.2.1
 psycopg2==2.7.7
 psycopg2-binary==2.8.4
 pycurl==7.43.0.3
+python-dateutil==2.8.1
 pytz==2019.3
 requests==2.22.0
 s3transfer==0.2.1
