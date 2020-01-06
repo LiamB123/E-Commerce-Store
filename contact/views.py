@@ -37,7 +37,8 @@ def sales_form(request):
 	    
 	    if form.is_valid():
 	        form.save()
-	        return HttpResponse("Your message sent successfully!")
+	        return HttpResponse("Your message sent successfully!", "index.html")
+	        
     else:
         form = SalesForm
         
