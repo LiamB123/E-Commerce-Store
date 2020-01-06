@@ -1,4 +1,5 @@
 Django==1.11.17
+boto3==1.10.45
 Pillow==4.3.0
 chardet==2.2.1
 colorama==0.2.5
