@@ -18,6 +18,7 @@ def contact_us(request):
 	    
 	    if form.is_valid():
 	        form.save()
+	        return HttpResponse("Your message sent successfully!")
     else:
         form = UserContactForm
         
@@ -36,6 +37,7 @@ def sales_form(request):
 	    
 	    if form.is_valid():
 	        form.save()
+	        return HttpResponse("Your message sent successfully!")
     else:
         form = SalesForm
         
