@@ -4,36 +4,43 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse 
 from .forms import UserContactForm, SalesForm
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import contact, sales_form
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def contact_form(request):
-    """ returns the contact form"""
-    
+def contact_us(request):
+    template="contact.html"
     if request.method == 'POST':
-            form = UserContactForm(request.POST)
-            if form.is_valid():
-                return HttpResponse('Thanks for contacting us!')
+	    form=UserContactForm(request.POST)
+	    
+	    if form.is_valid():
+	        form.save()
     else:
-            form = UserContactForm
-    
-    return render(request, 'contact.html', {'form': form})
+        form = UserContactForm
+        
+    context={'form':form}
+        
+    return render(request, template , context)
+
 
 
 @login_required
 def sales_form(request):
     """ a view that returns a submission form for a user to sell a product"""
-    
+    template="contact.html"
     if request.method == 'POST':
-            form = SalesForm(request.POST)
-            if form.is_valid():
-                return HttpResponse('Thanks for contacting us!')
-            
+	    form=SalesForm(request.POST)
+	    
+	    if form.is_valid():
+	        form.save()
     else:
-            
-            form = SalesForm
-    
-    return render(request, 'sales_form.html',{'form': form})
+        form = SalesForm
+        
+    context={'form':form}
+        
+    return render(request, template , context)
+
     

@@ -10,7 +10,9 @@ class contact(models.Model):
     subject= models.CharField(max_length=50, blank=False,null=False)
     message=models.TextField(max_length=300,blank=False,null=False)
     contact= models.EmailField(max_length=80, blank=False,null=False)
-    date = models.DateField()
+    
+    def __str__(self):
+        return f'{self.name}'
     
     
     
@@ -19,5 +21,7 @@ class sales_form(models.Model):
     subject= models.CharField(max_length=50, blank=False,null=False)
     message=models.TextField(max_length=300,blank=False,null=False)
     contact_details= models.EmailField(max_length=80, blank=False,null=False)
-    date = models.DateField()
     image = models.ImageField(upload_to="static/img/received")
+    
+    def __str__(self):
+        return f'{self.name}'

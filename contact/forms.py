@@ -5,7 +5,7 @@ class UserContactForm(forms.ModelForm):
     """ Form allowing users to contact site owner with issues/queries"""
     class Meta:
         model=contact
-        fields=('name','subject','message','contact')
+        fields=('name','subject','message','contact',)
         
    
     
@@ -14,4 +14,4 @@ class SalesForm(forms.Form):
     """ Form for users to submit there jersey for resale """
     class Meta:
         model=sales_form
-        fields=('name','subject', 'message', 'contact_details','image')
+        fields=('name','subject', 'message', 'contact_details','image',)
