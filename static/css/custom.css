@@ -53,7 +53,9 @@ label{
     text-decoration: underline ;
 }
 
-
+.caption{
+    padding-left: 10px;
+}
 .behind{
     z-index: -1;
 }
