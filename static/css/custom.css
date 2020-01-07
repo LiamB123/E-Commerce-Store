@@ -54,7 +54,8 @@ label{
 }
 
 .caption{
-    padding-left: 10px;
+    padding-left: 10%;
+    font-weight: 500;
 }
 .behind{
     z-index: -1;
@@ -68,7 +69,7 @@ label{
     background-position: center center;
     background-repeat: no-repeat;
     width:100%;
-    height:100%;
+    height:90%;
     margin: 5px 5px 5px 5px ;
 }
 
@@ -78,4 +79,11 @@ label{
     background-color:#F8F8F8 ;
     color:black;
     font-family: Montserrat;
+}
+
+input{
+     border: 2px solid #fafafa;
+}
+.input-group{
+  padding:5px;  
 }

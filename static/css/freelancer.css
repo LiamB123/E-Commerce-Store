@@ -250,6 +250,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+ 
 }
 
 button,
@@ -596,7 +597,7 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px;
+  margin-left: 2px;
 }
 
 .no-gutters {
@@ -4425,6 +4426,7 @@ input[type="button"].btn-block {
   border-top-left-radius: calc(0.5rem - 0.125rem);
   border-top-right-radius: calc(0.5rem - 0.125rem);
   height: 30vh;
+  background-repeat: no-repeat;
 }
 
 .card-img-bottom {
