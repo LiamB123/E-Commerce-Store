@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/LiamB123/E-Commerce-Store.svg?branch=master)](https://travis-ci.org/LiamB123/E-Commerce-Store)
 
-# Retro Jerseys
-## - An ecommerce site for selling retro NBA jerseys
+# Retro Jerseys  https://liams-the-store.herokuapp.com/
+##An ecommerce site for selling retro NBA jerseys
 
 Retro Jerseys is an ecommerce site for buying retro nba jerseys, mainly from the 90's and 2000's era. 
 The purpose of the site for enthusiasts in the niche to buy hard to find jerseys, or sell their own collection through the site. 
@@ -112,29 +112,35 @@ Travis-ci - https://travis-ci.org/
 
 ### Testing
   
+ Travis-CI was used to make sure that continous testing was undertaken at every commit. After many attempts with multiple depency and library version changes it passed! 
+   
+To maximise my testing i ran all tests on varying devices available (desktop, laptop, tablet and iphones 8 onward) 
+  
 #### Home Page
-    
-  
-  
+ 
+1. The first test was to push all buttons, make sure they led to the correct pages and that the animation on the buttons triggered when hovered over.
+The Nav Bar was to have "Store, Register, Sign In" as options for a non signed in user and then "Store, Log Out, Cart". After trying it out on all devices I noted one key issue.
+The key problem found during this testing was that on phones, the dropdown menu doesnt remain open once clicked. This is to due with a conflict in the JQuery for Stripe and the Bootstrap used for the dropdown menu.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+2. The Contact Forms off of the home page were tested, with repeatedly submitting forms that were missing variables. They were successfully refused by the page requiring an email in the contact section and limiting the size of the input in the message section. 
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+#### Store
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+1. The Store section was tested by attempting to add excessive amounts of the products, which was successfully found to be limited to 19 items per user at a time. 
+2. The products themselves were tested as the django admin would not accept a product without all necessary requirements. The images succesfully saving to the S3 Bucket.
+3. The amount of a product was easily edited and saved correspondingly in the cart. 
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+#### Cart
+1. The cart's contents were easily manipulated in value, however it was noted that the addition of a trash can icon for an instant removal of the product would of been an added UX idea.
+2. The cart could be accessed directly from the url, however it could not be added to without being signed in so I felt that was okay.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+#### Checkout
+1. The Checkout requried all fields to be filled out with multiple forms partly filled out succesfully refused by the site requiring the fields to be filled out correctly. Email fields,number fields all behaved as was hoped.
+2.The Stripe payments were succesful while using the test card number (4242 4242 4242 4242), They were succesfully accepted by stripe as test payments with actual card payments not succesfully going through as the stripe account is not activated.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-Deployment
+
+### Deployment
 
 This project is deployed on Heroku. 
 To get the project to deploy on heroku within the settings.py app I created several enviornnmental factors that could be kept hidden for security purposes. Thanks to these Config Vars Heroku can have them plugged in for deployment.
@@ -149,17 +155,16 @@ I find GitPod the quickest way to clone and run a project such as this locally!
 
 
 
-Credits
+### Credits
 
 Certain aspects of the creation of the accounts, checkout and cart apps are taken from the Code Institutes tutorials on how to create these apps, written in the video by Niel McEwan and Matt Rudge.
 
 
-
-Content
+### Content
 The text for all is written by myself, 
 
-Media
+### Media
 The photos used in this site were obtained from a google image search, with most originating from https://www.fanatics.com/.
 
-Acknowledgements
+### Acknowledgements
 I received inspiration from this project as it was always an interest of mine to see how successful a niche topic such as this would do in the highly diluted sports merchandise industry within Ireland.
