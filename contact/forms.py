@@ -10,8 +10,8 @@ class UserContactForm(forms.ModelForm):
    
     
     
-class SalesForm(forms.Form):
+class SalesForm(forms.ModelForm):
     """ Form for users to submit there jersey for resale """
     class Meta:
         model=sales_form
-        fields=('name','subject', 'message', 'contact_details','image')
+        fields=('name','subject', 'message', 'contact','image')

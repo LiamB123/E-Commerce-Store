@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse 
+from home.views import index
 from .forms import UserContactForm, SalesForm
 from django.core.mail import send_mail
 from django.conf import settings
@@ -18,7 +19,7 @@ def contact_us(request):
 	    
 	    if form.is_valid():
 	        form.save()
-	        
+	        return redirect('index')
     else:
         form = UserContactForm
         
@@ -27,16 +28,17 @@ def contact_us(request):
     return render(request, template , context)
 
 
-
 @login_required
 def sales_form(request):
     """ a view that returns a submission form for a user to sell a product"""
-    template="contact.html"
+    
+    template="sales_form.html"
     if request.method == 'POST':
 	    form=SalesForm(request.POST)
 	    
 	    if form.is_valid():
 	        form.save()
+	        return redirect('index')
 	        
 	        
     else:
