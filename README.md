@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/LiamB123/E-Commerce-Store.svg?branch=master)](https://travis-ci.org/LiamB123/E-Commerce-Store)
 
-# Retro Jerseys- An ecommerce site for selling retro NBA jerseys
+# Retro Jerseys
+## - An ecommerce site for selling retro NBA jerseys
 
 Retro Jerseys is an ecommerce site for buying retro nba jerseys, mainly from the 90's and 2000's era. 
 The purpose of the site for enthusiasts in the niche to buy hard to find jerseys, or sell their own collection through the site. 
