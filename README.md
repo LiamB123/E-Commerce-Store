@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/LiamB123/E-Commerce-Store.svg?branch=master)](https://travis-ci.org/LiamB123/E-Commerce-Store)
 
 # Retro Jerseys  https://liams-the-store.herokuapp.com/
-##An ecommerce site for selling retro NBA jerseys
+## An ecommerce site for selling retro NBA jerseys
 
 Retro Jerseys is an ecommerce site for buying retro nba jerseys, mainly from the 90's and 2000's era. 
 The purpose of the site for enthusiasts in the niche to buy hard to find jerseys, or sell their own collection through the site. 
@@ -136,6 +136,7 @@ The key problem found during this testing was that on phones, the dropdown menu 
 
 #### Checkout
 1. The Checkout requried all fields to be filled out with multiple forms partly filled out succesfully refused by the site requiring the fields to be filled out correctly. Email fields,number fields all behaved as was hoped.
+
 2.The Stripe payments were succesful while using the test card number (4242 4242 4242 4242), They were succesfully accepted by stripe as test payments with actual card payments not succesfully going through as the stripe account is not activated.
 
 
