@@ -6,13 +6,17 @@
 Retro Jerseys is an ecommerce site for buying retro nba jerseys, mainly from the 90's and 2000's era. 
 The purpose of the site for enthusiasts in the niche to buy hard to find jerseys, or sell their own collection through the site. 
 Its a simple ecommerce webiste, which requires membership to buy from the site.
-
 Since the success of the "Sneakerhead" market, I feel it is an angle not yet taken within the sports entusiast/memorabilia/fashion industry.
 
+
 UX
+
+
 The UX i wanted to achieve was ease of use at all times, i wanted a full purchase to take  minimal clicks and clear display of product and price. 
 My Ux focus was on ease of access and making all products available quickly findable, the desirable black and white styling fo the backround allows the real focus, the coloured jerseys, to stand out in the store section of the page.
 There are few but valuable calls to action on the home page both to sign up for the site, to allow acces, and to traverse the simple html pages. 
+
+
 
 User Stories:
 There are 2 key users I would like to use this page with scale to grow out from this starting niche.
