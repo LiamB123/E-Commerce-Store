@@ -136,7 +136,6 @@ The key problem found during this testing was that on phones, the dropdown menu 
 
 #### Checkout
 1. The Checkout requried all fields to be filled out with multiple forms partly filled out succesfully refused by the site requiring the fields to be filled out correctly. Email fields,number fields all behaved as was hoped.
-
 2.The Stripe payments were succesful while using the test card number (4242 4242 4242 4242), They were succesfully accepted by stripe as test payments with actual card payments not succesfully going through as the stripe account is not activated.
 
 
