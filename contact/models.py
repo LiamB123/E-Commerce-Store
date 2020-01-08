@@ -12,7 +12,7 @@ class contact(models.Model):
     contact= models.EmailField(max_length=80, blank=False,null=False)
     
     def __str__(self):
-        return {self.name}
+        return f'{self.name}'
     
     
     
@@ -24,4 +24,4 @@ class sales_form(models.Model):
     image = models.ImageField(upload_to="static/img/received")
     
     def __str__(self):
-        return {self.name}
+        return f'{self.name}'
