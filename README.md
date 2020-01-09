@@ -159,6 +159,8 @@ I find GitPod the quickest way to clone and run a project such as this locally!
 
 Certain aspects of the creation of the accounts, checkout and cart apps are taken from the Code Institutes tutorials on how to create these apps, written in the video by Niel McEwan and Matt Rudge.
 
+A Startboostrap theme named "freelancer" was used as a base template, it can be found here https://startbootstrap.com/themes/freelancer/.
+
 
 ### Content
 The text for all is written by myself, 
