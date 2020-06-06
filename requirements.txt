@@ -1,4 +1,4 @@
-Django==1.11.17
+Django==1.11.29
 boto3==1.10.45
 Pillow==4.3.0
 chardet==2.2.1
